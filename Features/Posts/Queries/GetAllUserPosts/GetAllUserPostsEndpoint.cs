@@ -14,9 +14,9 @@ namespace MinimalApiEndpoint.Features.Posts.Queries.GetAllUserPosts
 
         }
 
-        public async void AddRoute(IEndpointRouteBuilder app)
+        public void AddRoute(IEndpointRouteBuilder app)
         {
-            app.MapGet("/posts", async () => await HandleAsync(new GetAllUserPostsRequest()));
+            app.MapGet("/post", async () => await HandleAsync(new GetAllUserPostsRequest()));
         }
 
         public async Task<GetAllUserPostsResponse> HandleAsync(GetAllUserPostsRequest request)

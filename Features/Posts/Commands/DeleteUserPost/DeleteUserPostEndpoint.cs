@@ -15,7 +15,7 @@ namespace MinimalApiEndpoint.Features.Posts.Commands.DeleteUserPost
 
         public void AddRoute(IEndpointRouteBuilder app)
         {
-            app.MapDelete("/posts/{postId}", (int postId) => HandleAsync(new DeleteUserPostRequest { userPostId = postId }));
+            app.MapDelete("/post/{postId}", (int postId) => HandleAsync(new DeleteUserPostRequest { userPostId = postId }));
         }
 
         public async Task<IResult> HandleAsync(DeleteUserPostRequest request)
